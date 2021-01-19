@@ -112,7 +112,7 @@ include(${TARGET})
 
 set(CMAKE_CC_FLAGS "${CFLAGS} ${TARGET_CFLAGS}" CACHE STRING "" FORCE)
 set(CMAKE_ASM_FLAGS "${AFLAGS} ${TARGET_CFLAGS} ${TARGET_AFLAGS}" CACHE STRING "" FORCE)
-set(CMAKE_CXX_FLAGS "${CPPFLAGS} ${TARGET_CFLAGS} ${TARGET_CPPFLAGS}" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "${CXXFLAGS} ${TARGET_CFLAGS} ${TARGET_CXXFLAGS}" CACHE STRING "" FORCE)
 set(CMAKE_EXE_LINKER_FLAGS "${LDFLAGS} ${TARGET_LDFLAGS}" CACHE STRING "" FORCE)
 
 # ------------------------------------------------------------------------------
@@ -155,7 +155,7 @@ add_executable(ref_app
 )
 
 target_include_directories(ref_app PUBLIC
-    ${TARGET_INCLUDES} 
+    ${TARGET_INCLUDES}
     ${PATH_APP}
     ${PATH_APP}/mcal/${TARGET}
 )
